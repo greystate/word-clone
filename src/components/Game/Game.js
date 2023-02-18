@@ -14,7 +14,7 @@ function Game() {
 	const [guesses, setGuesses] = React.useState([])
 
 	return <>
-		<GuessHistory guesses={guesses} />
+		<GuessHistory guesses={guesses} answer={answer} />
 		<GuessInput guesses={guesses} setGuesses={setGuesses} />
 	</>
 }
