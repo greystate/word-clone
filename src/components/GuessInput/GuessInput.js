@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput() {
+function GuessInput({ guesses, setGuesses }) {
 	const allowed = 'a-zA-ZæøåÆØÅ'
 	const allowPattern = `[${allowed}]{5}`
 	const disallowPattern = `[^${allowed}]`
@@ -22,11 +22,13 @@ function GuessInput() {
 	function handleSubmit(event) {
 		event.preventDefault()
 		const currentGuess = guess
+		const newGuesses = [...guesses, guess]
 
 		// Do stuff ...
 		console.log({ guess: currentGuess })
 
 		setGuess('')
+		setGuesses(newGuesses)
 	}
 
 	function validateGuess(value) {

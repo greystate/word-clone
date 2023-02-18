@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessHistory({ guesses, setGuesses }) {
+function GuessHistory({ guesses }) {
 
 	return (
 		<div className="guess-results">
