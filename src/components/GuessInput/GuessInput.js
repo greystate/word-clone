@@ -8,8 +8,8 @@ function GuessInput() {
 
 	return (
 		<form className="guess-input-wrapper" onSubmit={handleSubmit}>
-			<label for="guess-input">Indtast gæt:</label>
-			<input autofocus id="guess-input" type="text" pattern={allowPattern} value={guess} onChange={handleInput} />
+			<label htmlFor="guess-input">Indtast gæt:</label>
+			<input autoFocus id="guess-input" type="text" pattern={allowPattern} value={guess} onChange={handleInput} />
 		</form>
 	)
 
